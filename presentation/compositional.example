@@ -1,0 +1,57 @@
+
+.outlined, .outlined--light, .outlined--dark {
+  border-size: 2px;
+  border-style: solid;
+}
+
+.outlined--light {
+  border-color: lightgray;
+}
+
+.outlined--dark {
+  border-color: black;
+}
+
+.soft, .soft-top {
+  padding-top: 20px;
+}
+
+.soft, .soft-left {
+  padding-left: 20px;
+}
+
+.soft, .soft-right {
+  padding-right: 20px;
+}
+
+.soft, .soft-bottom {
+  padding-bottom: 20px;
+}
+
+.hard, .hard-top {
+  padding-top: 0px;
+}
+
+.hard, .hard-left {
+  padding-left: 0px;
+}
+
+.hard, .hard-bottom {
+  padding-bottom: 0px;
+}
+
+.hard, .hard-top {
+  padding-top: 0px;
+}
+
+.text-primary, .text-dark-secondary {
+  font-family: 'roboto-sans';
+}
+
+.text-primary {
+  color: blue;
+}
+
+.text-dark-secondary {
+  color: lightgray;
+}

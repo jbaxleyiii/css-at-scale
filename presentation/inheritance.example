@@ -1,0 +1,28 @@
+
+.card {
+  border: 2px solid black;
+  background: white;
+}
+
+.card__item {
+  border-bottom: 2px solid gray;
+  padding: 5px 20px;
+  font-family: 'roboto sans';
+  color: lightgray;
+}
+
+.card__item--first {
+  padding-top: 20px;
+}
+
+.card__item--flush {
+  padding: 5px 0px;
+}
+
+.card__item--last {
+  padding-bottom: 0px;
+}
+
+.card__item--link {
+  color: blue;
+}

@@ -3,13 +3,9 @@ import React from "react";
 
 // Import Spectacle Core tags
 import {
-  Appear,
-  CodePane,
   Deck,
   Heading,
   Image,
-  Layout,
-  Fill,
   Link,
   List,
   ListItem,
@@ -24,36 +20,19 @@ import CodeSlide from "spectacle-code-slide";
 // Import image preloader util
 import preloader from "spectacle/lib/utils/preloader";
 
-import Terminal from "../assets/terminal";
-
 import {
   theme,
 } from "../assets";
 
-import ClassExample from "./class";
-import StatelessExample from "./stateless";
-import CrazyForm from "./props";
-import StateExample from "./state";
-import EventExample from "./event";
-import StyleExample from "./style";
-import LifecycleExample from "./lifecycle";
 
 const images = {
   black: require("../assets/bg-black.jpg"),
   orange: require("../assets/bg-orange.jpg"),
   white1: require("../assets/bg-white-1.jpg"),
   white2: require("../assets/bg-white-2.jpg"),
-  nope: require("../assets/nope.gif"),
-  react: require("../assets/react.png"),
-  magic: require("../assets/magic.gif"),
-  app: require("../assets/app.png"),
-  cra: require("../assets/cra.png"),
-  turtle: require("../assets/turtle.gif"),
-  thanks: require("../assets/thanks.gif"),
 };
 
 preloader(images);
-
 
 const getImage = (image) => {
   if (image && images[image]) {
@@ -66,567 +45,465 @@ const Presentation = () => (
   <Spectacle theme={theme}>
     <Deck transition={["fade", "slide"]} transitionDuration={500}>
 
-      {/* Home */}
-      <Slide transition={[]} bgImage={getImage("orange")}>
-        <Heading size={1} fit caps lineHeight={1} textColor="light-primary">
-          React
+      {/* Intro */}
+      <Slide transition={[]} bgImage={getImage("black")}>
+        <Heading size={8} textFont="secondary" textColor="light-secondary">
+          <S type="italic">Designing for the future</S>
         </Heading>
-        <Heading size={1} fit textColor="dark-tertiary">
-          The Beginning of the
+        <Heading size={1} margin="20px 0 0 0" fit caps lineHeight={1} textColor="light-primary">
+          Scaleable CSS
         </Heading>
-        <Heading size={1} fit textColor="dark-secondary">
-          Rest of Your Life(cycle)
+      </Slide>
+
+      {/* Self */}
+      <Slide transition={[]} bgImage={getImage("white2")}>
+        <Heading  fit caps lineHeight={1} textColor="primary">
+          Hello! I'm James
         </Heading>
-        <Link href="https://github.com/johnthepink/react-citn">
-          <Text bold caps textColor="tertiary">View on Github</Text>
-        </Link>
+        <Heading size={10} textFont="secondary" textColor="dark-secondary">
+          <S type="italic">Development Director at NewSpring Church</S>
+        </Heading>
       </Slide>
 
       {/* What */}
       <Slide transition={[]} bgImage={getImage("white1")}>
-        <Heading size={1} fit caps textColor="primary">
-          What is React?
+        <Heading  fit caps lineHeight={1} textColor="primary">
+          What is css?
         </Heading>
-        <Image src={getImage("react")} height={200} />
-        <List textColor="dark-primary" textFont="secondary">
-          <Appear><ListItem>javascript UI building library</ListItem></Appear>
-          <Appear><ListItem>just the V in MVC</ListItem></Appear>
-          <Appear><ListItem>backend indifferent</ListItem></Appear>
-          <Appear><ListItem>virtual DOM</ListItem></Appear>
-        </List>
+        <Heading size={10} textFont="secondary" textColor="dark-secondary">
+          <S type="italic">and why that isn't a bad word</S>
+        </Heading>
+        <Text
+          margin="30px 0 0 0"
+          textColor="dark-primary"
+          textFont="secondary"
+          textAlign="left"
+          textSize="28px"
+          lineHeight={1.4}
+        >
+          Initially introduced to the web in late 1996, CSS (or Cascading Style Sheets) is a style sheet language used to control the visual presentation of HMTL<br/><br/><S type="bold italic">CSS is powerful.</S> It is one of three languages every webview in the world can read. It is also the first point of engagement with anything on the web.
+        </Text>
       </Slide>
 
-      {/* Why */}
-      <Slide transition={[]} bgImage={getImage("black")}>
-        <Heading size={1} fit caps textColor="primary">
-          But...Why React?
+      {/* Where */}
+      <Slide transition={[]} bgImage={getImage("orange")}>
+        <Heading size={1} margin="20px 0 0 0" fit caps lineHeight={1} textColor="light-primary">
+          The scope of CSS
         </Heading>
-        <List textColor="light-primary" textFont="secondary">
-          <Appear><ListItem>extremely efficient</ListItem></Appear>
-          <Appear><ListItem>very easy to write</ListItem></Appear>
-          <Appear><ListItem>declarative components</ListItem></Appear>
-          <Appear><ListItem>easy to understand</ListItem></Appear>
-          <Appear><ListItem>large ecosystem</ListItem></Appear>
-          <Appear><ListItem>facebook backed</ListItem></Appear>
-          <Appear><ListItem>amazing dev tools</ListItem></Appear>
-          <Appear><ListItem>client render</ListItem></Appear>
-        </List>
+      </Slide>
+
+      <Slide transition={[]} bgColor="light-primary">
+        <Image width="100%" src="https://www.google.com/adwords/images/illustrations/overview-browser-text.png" />
+      </Slide>
+
+      <Slide transition={[]} bgColor="light-primary">
+        <Image width="70%" height="100%" src="https://dg0ddngxdz549.cloudfront.net/images/cached/images/remote/http_images.newspring.cc/section/worship/1x1_2370_2370_90.jpg" />
+      </Slide>
+
+      <Slide transition={[]} bgColor="light-primary">
+        <Image width="100%" src="https://github-atom-io-herokuapp-com.global.ssl.fastly.net/assets/screenshot-main@2x-f5f56d18fa8896b3d987d24fc903d03f.png" />
+      </Slide>
+
+      {/* What can I css */}
+      <Slide transition={[]} bgImage={getImage("orange")}>
+        <Heading size={1} margin="20px 0 0 0" fit caps lineHeight={1} textColor="light-primary">
+          The usage of CSS
+        </Heading>
+      </Slide>
+
+      <Slide transition={[]} bgColor="light-primary">
+        <Image width="80%" src="http://una.im/images/posts/classy-css/buttons.png" />
+      </Slide>
+
+      <Slide transition={[]} bgColor="light-primary">
+        <Image width="80%" src="https://d13yacurqjgara.cloudfront.net/users/61064/screenshots/3013018/attachments/630293/duolingo-bots-full.png" />
+      </Slide>
+
+      <Slide transition={[]} bgColor="light-primary">
+        <Image width="80%" src="http://phandroid.s3.amazonaws.com/wp-content/uploads/2015/04/materialdesign_introduction.png" />
+      </Slide>
+
+      {/* What does scale mean */}
+      <Slide transition={[]} bgImage={getImage("orange")}>
+        <Heading size={1} margin="20px 0 0 0" fit caps lineHeight={1} textColor="light-primary">
+          Measurements of scaleable css
+        </Heading>
+      </Slide>
+
+      {/* Performant */}
+      <Slide transition={[]} bgImage={getImage("white1")}>
+        <Heading  fit caps lineHeight={1} textColor="primary">
+          Scaleable css is fast
+        </Heading>
+        <Heading size={10} textFont="secondary" textColor="dark-secondary">
+          <S type="italic">speed is a core value</S>
+        </Heading>
+        <Text
+          margin="30px 0 0 0"
+          textColor="dark-primary"
+          textFont="secondary"
+          textAlign="left"
+          textSize="28px"
+          lineHeight={1.4}
+        >
+          There are three core concepts around css speed:
+          <List textFont="secondary" textColor="dark-primary">
+            <ListItem textSize="28px" margin="0 0 10px 0">Specificity</ListItem>
+            <ListItem textSize="28px" margin="0 0 10px 0">Repaints and Reflow</ListItem>
+            <ListItem textSize="28px" margin="0 0 10px 0">Size</ListItem>
+          </List>
+        </Text>
       </Slide>
 
       {/* Basic Example */}
       <CodeSlide
-        lang="jsx"
+        lang="css"
         transition={[]}
-        code={require("raw!./basic.example")}
+        code={require("raw!./specificity.example")}
         ranges={[
-          { loc: [0, 9], title: "Basic Component" },
-          { loc: [0, 1], note: "define class" },
-          { loc: [1, 2], note: "define render function" },
-          { loc: [2, 7], note: "return markup representation" },
+          { loc: [0, 1], title: "Specificity Index" },
+          { loc: [0, 1] },
+          { loc: [1, 2] },
+          { loc: [2, 3] },
+          { loc: [3, 4] },
+          { loc: [4, 5] },
+          { loc: [5, 6] },
+          { loc: [6, 7] },
+          { loc: [8, 9], note: "Selectors work right to left" },
+          { loc: [10, 11], note: "ID's are unique, so they don't need a tag name to go along with it" },
+          { loc: [12, 13], note: "Please don't do this" },
         ]}
       />
-
-      {/* SillyButton */}
-      <Slide transition={[]} bgImage={getImage("white2")}>
-        <Heading size={1} fit caps textColor="primary">
-          SillyButton
+      
+      {/* Resuable */}
+      <Slide transition={[]} bgImage={getImage("white1")}>
+        <Heading  fit caps lineHeight={1} textColor="primary">
+          Scaleable css is resuable
         </Heading>
-        <Layout>
-          <Fill>
-            <CodePane
-              textSize="20"
-              lang="jsx"
-              source={require("raw!./basic.example")}
-            />
-          </Fill>
-          <Fill
-            style={{
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-            }}
-          >
-            <div>
-              <button>silly!</button>
-            </div>
-          </Fill>
-        </Layout>
+        <Heading size={10} textFont="secondary" textColor="dark-secondary">
+          <S type="italic">automate what is important</S>
+        </Heading>
+        <Text
+          margin="30px 0 0 0"
+          textColor="dark-primary"
+          textFont="secondary"
+          textAlign="left"
+          textSize="28px"
+          lineHeight={1.4}
+        >
+          Imagine if you had to write inline styles for every element that gets rendered onto a page. How about for every page on your site? Scaleable css is infitely resuable and works regardless of context.
+        </Text>
       </Slide>
 
-      {/* JSX */}
-      <Slide transition={[]} bgImage={getImage("orange")}>
-        <Heading size={1} caps textColor="light-primary">
-          JSX
+      {/* Extendable */}
+      <Slide transition={[]} bgImage={getImage("white1")}>
+        <Heading fit caps lineHeight={1} textColor="primary">
+          Scaleable css is extendable
         </Heading>
-        <List textColor="dark-primary" textFont="secondary">
-          <Appear><ListItem>XML-like syntax in js</ListItem></Appear>
-          <Appear><ListItem>makes UI templating really nice</ListItem></Appear>
-          <Appear><ListItem>not necessary, but much nicer</ListItem></Appear>
-          <Appear><ListItem>representation of how dom will look</ListItem></Appear>
-          <Appear><ListItem>it is just javascript</ListItem></Appear>
-        </List>
+        <Heading size={10} textFont="secondary" textColor="dark-secondary">
+          <S type="italic">accuracy matters</S>
+        </Heading>
+        <Text
+          margin="30px 0 0 0"
+          textColor="dark-primary"
+          textFont="secondary"
+          textAlign="left"
+          textSize="28px"
+          lineHeight={1.4}
+        >
+          By its very design, CSS is an extensable language. The cascade allows for slight variations of extisting patterns higher in the stylesheet. Scaleable css takes this princepal to heart which helps to enforce consistency while preventing cookie cutter design.
+        </Text>
       </Slide>
 
-      {/* ReactDOM example */}
-      <CodeSlide
-        lang="js"
-        transition={[]}
-        code={require("raw!./dom.example")}
-        ranges={[
-          { loc: [0, 10], title: "No JSX" },
-          { loc: [3, 4], note: "create <ul>" },
-          { loc: [4, 5], note: "create <li>" },
-          { loc: [5, 6], note: "create second <li>" },
-        ]}
-      />
-
-      {/* ReactDOM shorthand */}
-      <CodeSlide
-        lang="js"
-        transition={[]}
-        code={require("raw!./dom2.example")}
-        ranges={[
-          { loc: [0, 10], title: "Shorthand" },
-          { loc: [3, 4], note: "create <ul>" },
-          { loc: [4, 5], note: "create <li>" },
-          { loc: [5, 6], note: "create second <li>" },
-        ]}
-      />
-
-      {/* JSX version */}
-      <CodeSlide
-        lang="jsx"
-        transition={[]}
-        code={require("raw!./dom3.example")}
-        ranges={[
-          { loc: [0, 10], title: "JSX version" },
-          { loc: [3, 7], note: "much happy" },
-        ]}
-      />
-
-      {/* gif pause */}
-      <Slide transition={[]} bgImage={getImage("magic")} />
-
-      {/* Just JS */}
-      <CodeSlide
-        lang="jsx"
-        transition={[]}
-        code={require("raw!./dom4.example")}
-        ranges={[
-          { loc: [0, 10], title: "Just JS" },
-          { loc: [3, 7], note: "make the js" },
-        ]}
-      />
-
-      {/* Components */}
       <Slide transition={[]} bgImage={getImage("orange")}>
-        <Heading size={1} caps textColor="light-primary">
+        <Heading size={8} textFont="secondary" textColor="light-secondary">
+          <S type="italic">Learning from the industry</S>
+        </Heading>
+        <Heading size={1} margin="20px 0 0 0" fit caps lineHeight={1} textColor="light-primary">
+          Prior Art
+        </Heading>
+      </Slide>
+
+      <Slide transition={[]} bgImage={getImage("black")}>
+        <Heading size={8} textFont="secondary" textColor="light-secondary">
+          <S type="italic">Atomic Design</S>
+        </Heading>
+        <Heading size={1} margin="20px 0 0 0" fit caps lineHeight={1} textColor="light-primary">
+          Brad Frost
+        </Heading>
+      </Slide>
+
+      <Slide transition={[]} bgColor="light-primary">
+        <Image width="80%" src="http://bradfrost.com/wp-content/uploads/2013/06/atomic-design.png" />
+      </Slide>
+
+      <Slide transition={[]} bgImage={getImage("black")}>
+        <Heading size={8} textFont="secondary" textColor="light-secondary">
+          <S type="italic">ITCSS</S>
+        </Heading>
+        <Heading size={1} margin="20px 0 0 0" fit caps lineHeight={1} textColor="light-primary">
+          Harry Roberts
+        </Heading>
+      </Slide>
+
+      <Slide transition={[]} bgColor="light-primary">
+        <Image width="80%" src="https://www.xfivecdn.com/xfive/wp-content/uploads/2016/02/10154630/itcss-key-metrics.svg" />
+      </Slide>
+
+      <Slide transition={[]} bgImage={getImage("black")}>
+        <Heading size={8} textFont="secondary" textColor="light-secondary">
+          <S type="italic">Classy CSS</S>
+        </Heading>
+        <Heading size={1} margin="20px 0 0 0" fit caps lineHeight={1} textColor="light-primary">
+          Una Kravets
+        </Heading>
+      </Slide>
+
+      <Slide transition={[]} bgColor="light-primary">
+        <Image width="40%" src="http://una.im/images/posts/classy-css/mixin.png" />
+        <Image width="40%" src="http://una.im/images/posts/classy-css/extend.png" />
+      </Slide>
+
+      <Slide transition={[]} bgColor="light-primary">
+        <Image width="100%" src="https://media.giphy.com/media/OSWRJKmwUEOD6/giphy.gif" />
+      </Slide>
+
+      <Slide transition={[]} bgImage={getImage("orange")}>
+        <Heading size={8} textFont="secondary" textColor="light-secondary">
+          <S type="italic">Functional CSS libraries</S>
+        </Heading>
+        <Heading size={1} margin="20px 0 0 0" fit caps lineHeight={1} textColor="light-primary">
+          How to build scaleable css
+        </Heading>
+      </Slide>
+
+      <Slide transition={[]} bgImage={getImage("white1")}>
+        <Heading  fit caps lineHeight={1} textColor="primary">
+          Organic vs Inheritance vs Composition
+        </Heading>
+        <Heading size={10} textFont="secondary" textColor="dark-secondary">
+          <S type="italic">Putting the fun in functional</S>
+        </Heading>
+        <Text
+          margin="30px 0 0 0"
+          textColor="dark-primary"
+          textFont="secondary"
+          textAlign="left"
+          textSize="28px"
+          lineHeight={1.4}
+        >
+          Organic architecture is the most common form of css writing. As styles are needed, they are added to the end of the sheet. Organic sheets tend to have a lot of exceptions and overwrites.
+          <br />
+          <br />
+          Most libraries are built with the inheritance architecture. This is where you have a base style which gets extended and added on by another style. BEM conventions are strongly inheritance based.
+          <br />
+          <br />
+          Compositional (or functional) architecture favors small helper classes over contextual classes. It brings the reusablity (and testability) of functional programming to css!
+        </Text>
+      </Slide>
+
+      <Slide transition={[]} bgColor="light-primary">
+        <Image width="40%" src="https://developers.google.com/schemas/images/now_flightconfirmation.png" />
+      </Slide>
+
+      {/* Organic Example */}
+      <CodeSlide
+        lang="css"
+        transition={[]}
+        code={require("raw!./organic.example")}
+        ranges={[
+          { loc: [0, 1], title: "Building Organically" },
+          { loc: [1, 6] },
+          { loc: [7, 13] },
+          { loc: [14, 19] },
+          { loc: [20, 23] },
+          { loc: [24, 29] },
+          { loc: [30, 34] },
+          { loc: [35, 38] },
+        ]}
+      />
+
+      <Slide transition={[]} bgColor="light-primary">
+        <Image width="40%" src="https://developers.google.com/schemas/images/now_flightconfirmation.png" />
+      </Slide>
+
+      {/* Inheritance Example */}
+      <CodeSlide
+        lang="css"
+        transition={[]}
+        code={require("raw!./inheritance.example")}
+        ranges={[
+          { loc: [0, 1], title: "Building from Inheritance" },
+          { loc: [1, 5] },
+          { loc: [6, 12] },
+          { loc: [13, 16] },
+          { loc: [17, 20] },
+          { loc: [21, 24] },
+          { loc: [25, 28] },
+        ]}
+      />
+
+      <Slide transition={[]} bgColor="light-primary">
+        <Image width="40%" src="https://developers.google.com/schemas/images/now_flightconfirmation.png" />
+      </Slide>
+
+      {/* Compositional Example */}
+      <CodeSlide
+        lang="css"
+        transition={[]}
+        code={require("raw!./compositional.example")}
+        ranges={[
+          { loc: [0, 1], title: "Building from Composition" },
+          { loc: [1, 13] },
+          { loc: [14, 29] },
+          { loc: [30, 45] },
+          { loc: [46, 57] },
+        ]}
+      />
+
+      <Slide transition={[]} bgImage={getImage("orange")}>
+        <Heading size={8} textFont="secondary" textColor="light-secondary">
+          <S type="italic">How to build your library</S>
+        </Heading>
+        <Heading size={1} margin="20px 0 0 0" fit caps lineHeight={1} textColor="light-primary">
+          Compositional Architecture
+        </Heading>
+      </Slide>
+
+      <Slide transition={[]} bgImage={getImage("white1")}>
+        <Heading  fit caps lineHeight={1} textColor="primary">
+          Echo Architecture
+        </Heading>
+        <Text
+          margin="30px 0 0 0"
+          textColor="dark-primary"
+          textFont="secondary"
+          textAlign="left"
+          textSize="28px"
+          lineHeight={1.4}
+        >
+          The Echo architecture is a compositional focused alternative to ITCSS. It prioritizes simple components joined with a large number of variable controlled helpers. The architecture is made of the following types:
+          <List textFont="secondary" textColor="dark-primary">
+            <ListItem textSize="28px" margin="0 0 10px 0">Elements</ListItem>
+            <ListItem textSize="28px" margin="0 0 10px 0">Components</ListItem>
+            <ListItem textSize="28px" margin="0 0 10px 0">Helpers</ListItem>
+            <ListItem textSize="28px" margin="0 0 10px 0">Overrides</ListItem>
+          </List>
+        </Text>
+      </Slide>
+
+      <Slide transition={[]} bgImage={getImage("white1")}>
+        <Heading fit caps lineHeight={1} textColor="primary">
+          Elements
+        </Heading>
+        <Text
+          margin="30px 0 0 0"
+          textColor="dark-primary"
+          textFont="secondary"
+          textAlign="left"
+          textSize="28px"
+          lineHeight={1.4}
+        >
+          Elements are used to style native html elements and items like native elements (i.e icons). These can vary from headers to images to iframes. Some elements also create helper classes based on the base element. 
+        </Text>
+      </Slide>
+
+      <Slide transition={[]} bgImage={getImage("white1")}>
+        <Heading fit caps lineHeight={1} textColor="primary">
           Components
         </Heading>
-        <List textColor="dark-primary" textFont="secondary">
-          <Appear><ListItem>2 types of components</ListItem></Appear>
-          <List textColor="dark-primary" textFont="secondary" style={{ marginLeft: "40" }}>
-            <Appear><ListItem>classes</ListItem></Appear>
-            <Appear><ListItem>stateless</ListItem></Appear>
-          </List>
-          <Appear><ListItem>contains everything in one place</ListItem></Appear>
-          <List textColor="dark-primary" textFont="secondary" style={{ marginLeft: "40" }}>
-            <Appear><ListItem>markup</ListItem></Appear>
-            <Appear><ListItem>css</ListItem></Appear>
-            <Appear><ListItem>state</ListItem></Appear>
-            <Appear><ListItem>data fetch</ListItem></Appear>
-            <Appear><ListItem>js</ListItem></Appear>
-          </List>
-        </List>
+        <Text
+          margin="30px 0 0 0"
+          textColor="dark-primary"
+          textFont="secondary"
+          textAlign="left"
+          textSize="28px"
+          lineHeight={1.4}
+        >
+          Components are typically made up of multiple (sometimes nested) markup elements. They are styled more for layout and utility than traditional UI libraries. Components are thinks like cards, grids, and panels.
+        </Text>
       </Slide>
 
-      {/* Simple ES6 Class */}
-      <Slide transition={[]} bgImage={getImage("white2")}>
-        <Heading size={1} fit caps textColor="primary">
-          Simple Class
-        </Heading>
-        <Layout>
-          <Fill>
-            <CodePane
-              textSize="20"
-              lang="jsx"
-              source={require("raw!./class.example")}
-            />
-          </Fill>
-          <Fill
-            style={{
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-            }}
-          >
-            <div>
-              <ClassExample />
-            </div>
-          </Fill>
-        </Layout>
-      </Slide>
-
-      {/* Stateless function */}
-      <Slide transition={[]} bgImage={getImage("white2")}>
-        <Heading size={1} fit caps textColor="primary">
-          Stateless Function
-        </Heading>
-        <Layout>
-          <Fill>
-            <CodePane
-              textSize="20"
-              lang="jsx"
-              source={require("raw!./stateless.example")}
-            />
-          </Fill>
-          <Fill
-            style={{
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-            }}
-          >
-            <div>
-              <StatelessExample />
-            </div>
-          </Fill>
-        </Layout>
-      </Slide>
-
-      {/* Props slide */}
-      <Slide transition={[]} bgImage={getImage("black")}>
-        <Heading size={1} fit caps textColor="primary">
-          Props
-        </Heading>
-        <List textColor="light-primary" textFont="secondary">
-          <Appear><ListItem>way to pass information to a component</ListItem></Appear>
-          <Appear><ListItem>one direction: flows top down</ListItem></Appear>
-          <Appear><ListItem>makes resuability very simple</ListItem></Appear>
-          <Appear><ListItem>abstracts away internals of component</ListItem></Appear>
-        </List>
-      </Slide>
-
-      {/* Props (override text) */}
-      <Slide transition={[]} bgImage={getImage("white2")}>
-        <Layout>
-          <Fill>
-            <CodePane
-              textSize="20"
-              lang="jsx"
-              source={require("raw!./props.example")}
-            />
-          </Fill>
-          <Fill
-            style={{
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-            }}
-          >
-            <div>
-              <CrazyForm />
-            </div>
-          </Fill>
-        </Layout>
-      </Slide>
-
-      {/* State slide */}
-      <Slide transition={[]} bgImage={getImage("orange")}>
-        <Heading size={1} fit caps textColor="dark-primary">
-          State
-        </Heading>
-        <List textColor="light-primary" textFont="secondary">
-          <Appear><ListItem>manage internal state of your component</ListItem></Appear>
-          <Appear><ListItem>good for handling UI state</ListItem></Appear>
-        </List>
-      </Slide>
-
-      {/* State (active) */}
-      <Slide transition={[]} bgImage={getImage("white2")}>
-        <Layout>
-          <Fill>
-            <CodePane
-              textSize="20"
-              lang="jsx"
-              source={require("raw!./state.example")}
-            />
-          </Fill>
-          <Fill
-            style={{
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-            }}
-          >
-            <div>
-              <StateExample />
-            </div>
-          </Fill>
-        </Layout>
-      </Slide>
-
-      {/* DOM event slide */}
-      <Slide transition={[]} bgImage={getImage("black")}>
-        <Heading size={1} fit caps textColor="primary">
-          DOM Events
-        </Heading>
-        <List textColor="light-primary" textFont="secondary">
-          <Appear><ListItem>abstracts browser events to simple API</ListItem></Appear>
-          <Appear><ListItem>events for everything</ListItem></Appear>
-          <List textColor="light-primary" textFont="secondary" style={{ marginLeft: "40" }}>
-            <Appear><ListItem>onClick</ListItem></Appear>
-            <Appear><ListItem>onKeyPress</ListItem></Appear>
-            <Appear><ListItem>onChange</ListItem></Appear>
-            <Appear><ListItem>so many more</ListItem></Appear>
-          </List>
-        </List>
-      </Slide>
-
-      {/* DOM events (onClick) */}
-      <Slide transition={[]} bgImage={getImage("white2")}>
-        <Layout>
-          <Fill>
-            <CodePane
-              textSize="20"
-              lang="jsx"
-              source={require("raw!./event.example")}
-            />
-          </Fill>
-          <Fill
-            style={{
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-            }}
-          >
-            <div>
-              <EventExample />
-            </div>
-          </Fill>
-        </Layout>
-      </Slide>
-
-      {/* Add style based on state */}
-      <Slide transition={[]} bgImage={getImage("white2")}>
-        <Layout>
-          <Fill>
-            <CodePane
-              textSize="18"
-              lang="jsx"
-              source={require("raw!./style.example")}
-            />
-          </Fill>
-          <Fill
-            style={{
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-            }}
-          >
-            <div>
-              <StyleExample />
-            </div>
-          </Fill>
-        </Layout>
-      </Slide>
-
-      {/* Lifecycle functions */}
-      <Slide transition={[]} bgImage={getImage("orange")}>
-        <Heading size={1} fit caps textColor="light-primary">
-          Lifecycle Functions
-        </Heading>
-        <List textColor="dark-primary" textFont="secondary">
-          <Appear><ListItem>manage life of your component</ListItem></Appear>
-          <List textColor="dark-primary" textFont="secondary" style={{ marginLeft: "40" }}>
-            <Appear><ListItem>componentWillMount</ListItem></Appear>
-            <Appear><ListItem>componentDidMount</ListItem></Appear>
-            <Appear><ListItem>componentWillUnmount</ListItem></Appear>
-            <Appear><ListItem>componentWillUpdate</ListItem></Appear>
-            <Appear><ListItem>and more...</ListItem></Appear>
-          </List>
-        </List>
-      </Slide>
-
-      {/* Lifecycle functions (willmount) */}
-      <Slide transition={[]} bgImage={getImage("white2")}>
-        <Layout>
-          <Fill>
-            <CodePane
-              textSize="20"
-              lang="jsx"
-              source={require("raw!./lifecycle.example")}
-            />
-          </Fill>
-          <Fill
-            style={{
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-            }}
-          >
-            <div>
-              <LifecycleExample />
-            </div>
-          </Fill>
-        </Layout>
-      </Slide>
-
-      {/* gif pause */}
-      <Slide transition={[]} bgImage={getImage("nope")} bgDarken={0.5}>
-        <Heading size={1} fit caps textColor="light-primary">
-          But I don&#39;t
-        </Heading>
-        <Heading size={1} fit caps textColor="light-primary">
-          want to rewrite
-        </Heading>
-        <Heading size={1} fit caps textColor="light-primary">
-          everything
-        </Heading>
-      </Slide>
-
-      {/* Incrementally adoptable */}
-      <Slide transition={[]} bgImage={getImage("black")}>
-        <Heading size={1} fit caps textColor="primary">
-          Good news
-        </Heading>
-        <List textColor="light-primary" textFont="secondary">
-          <Appear><ListItem>incrementally adoptable</ListItem></Appear>
-          <Appear><ListItem>use it for new things</ListItem></Appear>
-          <Appear><ListItem>drop on any existing page</ListItem></Appear>
-          <Appear><ListItem>talk to your existing backend</ListItem></Appear>
-        </List>
-      </Slide>
-
-      {/* Our app */}
       <Slide transition={[]} bgImage={getImage("white1")}>
-        <Heading size={1} fit caps textColor="primary">
-          NewSpring App
+        <Heading fit caps lineHeight={1} textColor="primary">
+          Helpers
         </Heading>
-        <Layout>
-          <Fill>
-            <Image src={getImage("app")} width="400" />
-          </Fill>
-          <Fill
-            style={{
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-            }}
-          >
-            <div>
-              <List textColor="dark-primary" textFont="secondary">
-                <Appear><ListItem>React</ListItem></Appear>
-                <Appear><ListItem>Meteor/Cordova</ListItem></Appear>
-                <Appear><ListItem>shared code</ListItem></Appear>
-                <Appear><ListItem>open source&nbsp;
-                  <Link textColor="primary" href="https://github.com/newspring/holtzmann">
-                    <S type="underline" underline>(link)</S>
-                  </Link>
-                </ListItem></Appear>
-                <Appear><ListItem>steal it</ListItem></Appear>
-              </List>
-            </div>
-          </Fill>
-        </Layout>
+        <Text
+          margin="30px 0 0 0"
+          textColor="dark-primary"
+          textFont="secondary"
+          textAlign="left"
+          textSize="28px"
+          lineHeight={1.4}
+        >
+          Helpers is where from most of the magic of the echo architecture comes. These are namespaced for breakpoints, and can be used in conjuction to create complex and unique UI without custom css. An example of some helpers are things like text controls, padding controls, and event position controls.
+        </Text>
       </Slide>
 
-      {/* Getting Started */}
+      <Slide transition={[]} bgImage={getImage("white1")}>
+        <Heading fit caps lineHeight={1} textColor="primary">
+          Overrides
+        </Heading>
+        <Text
+          margin="30px 0 0 0"
+          textColor="dark-primary"
+          textFont="secondary"
+          textAlign="left"
+          textSize="28px"
+          lineHeight={1.4}
+        >
+          Used sparingly, overrides allow for forcing a style from higher in the sheet than custom later code. In practice, overrides are rarely needed, but when used, they allow for absolute control over display. An example override is a hidden utility to force an element to not be displayed.  
+        </Text>
+      </Slide>
+
+      <Slide transition={[]} bgImage={getImage("orange")}>
+        <Heading size={8} textFont="secondary" textColor="light-secondary">
+          <S type="italic">Real world examples</S>
+        </Heading>
+        <Heading size={1} margin="20px 0 0 0" fit caps lineHeight={1} textColor="light-primary">
+          Echo in practice
+        </Heading>
+      </Slide>
+
+      <Slide transition={[]} bgImage={getImage("white2")}>
+        <Heading size={1} caps lineHeight={1} textColor="primary">
+          <Link href="https://my.newspring.cc/groups/b8f1efa94886942f9e7716c00c04dc14">Example 1</Link>
+        </Heading>
+      </Slide>
+
+      <Slide transition={[]} bgImage={getImage("white2")}>
+        <Heading size={1} caps lineHeight={1} textColor="primary">
+          <Link href="https://native.newspring.cc/series">Example 2</Link>
+        </Heading>
+      </Slide>
+
+      <Slide transition={[]} bgImage={getImage("white2")}>
+        <Heading size={1} caps lineHeight={1} textColor="primary">
+          <Link href="https://my.newspring.cc/give/history">Example 3</Link>
+        </Heading>
+      </Slide>
+
+      <Slide transition={[]} bgImage={getImage("white2")}>
+        <Heading size={1} caps lineHeight={1} textColor="primary">
+          <Link href="https://my.newspring.cc/give/schedules">Example 4</Link>
+        </Heading>
+      </Slide>
+
+      <Slide transition={[]} bgImage={getImage("orange")}>
+        <Heading size={1} margin="20px 0 0 0" fit caps lineHeight={1} textColor="light-primary">
+          Questions?
+        </Heading>
+      </Slide>
+
       <Slide transition={[]} bgImage={getImage("black")}>
-        <Heading size={1} fit caps textColor="primary">
-          Getting started
+        <Heading size={1} margin="20px 0 0 0" fit caps lineHeight={1} textColor="light-primary">
+          Thank you!
         </Heading>
-        <Terminal>
-          <p className="font">$ npm install -g create-react-app</p>
-
-          <p className="font">
-            $ create-react-app my-app<br />
-            $ cd my-app/<br />
-            $ npm start
-          </p>
-
-          <p className="font" style={{ color: "green" }}>
-            Compiled Successfully!
-          </p>
-          <p className="font">
-            App running at http://localhost:3000
-          </p>
-        </Terminal>
-      </Slide>
-
-      {/* App preview */}
-      <Slide transition={[]} bgImage={getImage("orange")}>
-        <Image src={getImage("cra")} height={500} />
-      </Slide>
-
-      {/* gif break */}
-      <Slide transition={[]} bgImage={getImage("turtle")}>
-        <Heading size={1} fit caps textColor="light-primary">
-          Show Me Cool
+        <Heading size={8} margin="0 20px 0 0" textFont="secondary" textColor="light-secondary">
+          <S type="italic">james.baxley@newspring.cc</S>
         </Heading>
-        <Heading size={1} fit caps textColor="light-primary">
-          Things!
-        </Heading>
-      </Slide>
-
-      {/* Cool things */}
-      <Slide transition={[]} bgImage={getImage("orange")}>
-        <Heading size={1} fit caps textColor="light-primary">
-          Cool things
-        </Heading>
-        <List textColor="dark-primary" textFont="secondary">
-          <Appear><ListItem>
-            <Link href="https://facebook.github.io/react-native/">
-              <S type="underline">React Native</S>
-            </Link>
-          </ListItem></Appear>
-          <Appear><ListItem>
-            <Link href="https://github.com/FormidableLabs/react-music">
-              <S type="underline">React Music</S>
-            </Link>
-          </ListItem></Appear>
-          <Appear><ListItem>
-            <Link href="https://github.com/FormidableLabs/react-game-kit">
-              <S type="underline">React Games</S>
-            </Link>
-          </ListItem></Appear>
-          <Appear><ListItem>
-            <Link href="https://github.com/iamdustan/react-hardware">
-              <S type="underline">React Hardware</S>
-            </Link>
-          </ListItem></Appear>
-          <Appear><ListItem>
-            <Link href="https://twitter.com/reactjs/status/784088700460204032">
-              <S type="underline">React VR</S>
-            </Link>
-          </ListItem></Appear>
-          <Appear><ListItem>
-            <Link href="https://formidable.com/open-source/spectacle/">
-              <S type="underline">This presentation</S>
-            </Link>
-          </ListItem></Appear>
-          <Appear><ListItem>
-            <Link href="https://js.coach/">
-              <S type="underline">so. many. plugins.</S>
-            </Link>
-          </ListItem></Appear>
-        </List>
-      </Slide>
-
-      {/* thanks */}
-      <Slide transition={[]} bgImage={getImage("thanks")} bgDarken={0.3}>
-        <Heading size={1} fit caps textColor="light-primary">
-          I&#39;m Out
-        </Heading>
-        <Heading size={3} textColor="light-primary">
-          <Link textColor="primary" href="https://twitter.com/johnthepink">
-            @johnthepink
-          </Link>
-        </Heading>
-        <Heading size={3} textColor="light-primary">
-          <Link textColor="primary" href="http://react-citn.surge.sh/">
-            react-citn.surge.sh
-          </Link>
+        <Heading size={8} textFont="secondary" textColor="light-secondary">
+          <S type="italic">@jbaxleyiii</S>
         </Heading>
       </Slide>
 

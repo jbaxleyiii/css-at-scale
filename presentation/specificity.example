@@ -1,0 +1,13 @@
+#main-navigation {   }      /* ID (Fastest) */
+body.home #page-wrap {   }  /* ID */
+.main-navigation {   }      /* Class */
+ul li a.current {   }       /* Class *
+ul {   }                    /* Tag */
+ul li a {  }                /* Tag */
+* {   }                     /* Universal (Slowest) */
+
+#main-nav > li {   }  /* Slower than it might seem */
+
+ul#main-navigation {  } /* Don't do this */
+
+html body ul li a {  } /* panic */

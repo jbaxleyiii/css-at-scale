@@ -1,0 +1,38 @@
+
+.card {
+  border: 2px solid black;
+  background: white;
+  padding: 20px;
+}
+
+.flight-info {
+  color: lightgray;
+  font-size: 20px;
+  line-height: 22px;
+  border-bottom: 2px solid lightgray;
+}
+
+.plane {
+  position: absolute;
+  right: 40px;
+  top: 20px;
+}
+
+.flight-info {
+  position: relative;
+}
+
+.status {
+  font-weight: bold;
+  color: 'gray';
+  font-size: 15px;
+}
+
+.time {
+  color: lightgray;
+  font-size: 15px;
+}
+
+.link {
+  color: blue;
+}
